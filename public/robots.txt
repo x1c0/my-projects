@@ -1,0 +1,6 @@
+# Allow all web crawlers access to all content
+User-agent: *
+Allow: /
+
+# Specify the location of your sitemap (optional but recommended)
+Sitemap: https://x1c0.app/sitemap.xml

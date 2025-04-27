@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francisco Silva - Frontend Developer</title>
+    <script>
+      /* Script to set initial theme based on localStorage or OS preference to prevent flash */
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <style>
+      /* Critical CSS: Immediately set base dark theme colors if dark class is present */
+      html.dark {
+        background-color: #264653;
+        color: #e5e7eb;
+      }
+    </style>
+    <meta
+      name="description"
+      content="Portfolio website for Francisco Silva, showcasing frontend development projects and skills."
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#264653"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://x1c0.app/" />
+    <meta property="og:title" content="Francisco Silva - Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio website for Francisco Silva, showcasing frontend development projects and skills."
+    />
+    <meta property="og:image" content="https://x1c0.app/og-image.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://x1c0.app/" />
+    <meta
+      property="twitter:title"
+      content="Francisco Silva - Frontend Developer"
+    />
+    <meta
+      property="twitter:description"
+      content="Portfolio website for Francisco Silva, showcasing frontend development projects and skills."
+    />
+    <meta property="twitter:image" content="https://x1c0.app/og-image.png" />
+    <link href="/src/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

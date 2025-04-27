@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-dark: #264653;
+  --color-primary-teal: #2a9d8f;
+  --color-accent-yellow: #e9c46a;
+  --color-accent-orange: #f4a261;
+  --color-accent-coral: #e76f51;
+
+  --color-light-bg: theme(colors.gray.50);
+  --color-dark-bg: var(--color-primary-dark);
+  --color-light-text: var(--color-primary-dark);
+  --color-dark-text-primary: theme(colors.gray.200);
+  --color-dark-text-secondary: theme(colors.gray.200); 
+
+}
+
+/* Apply base styles to the body */
+body {
+  @apply bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text-primary font-sans antialiased transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
