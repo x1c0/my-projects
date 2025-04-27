@@ -7,7 +7,7 @@ const projectsData = [
     liveUrl: "https://pack-it.x1c0.app",
     codeUrl: "#TBD",
     tags: ["React", "Firebase", "TailwindCSS"],
-    imageUrl: "/pack-it.svg",
+    imageUrl: "pack-it.svg",
   },
 ];
 export default projectsData;

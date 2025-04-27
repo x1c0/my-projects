@@ -5,12 +5,11 @@ import Sitemap from "vite-plugin-sitemap";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/my-projects",
   plugins: [
     react(),
     tailwindcss(),
     Sitemap({
-      hostname: "https://x1c0.github.io/my-projects/",
+      hostname: "https://x1c0.github.io/",
       changefreq: "monthly",
     }),
   ],
